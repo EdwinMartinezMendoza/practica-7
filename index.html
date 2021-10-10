@@ -1,0 +1,108 @@
+<html>
+<head>
+  <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+<!-- César René Rivas Andrade 5-I-->
+
+<div class="grid-container">
+<div class=item7"></div>
+  <div class="item1">
+    <img  src="imagenes/logo.png" alt="Teto´s Cars Logo">
+  </div>
+  <div class="item2">
+
+    
+      <a href="#"><img src="imagenes/a1.png" alt="Trabajos de pintura" width="204" height="42"></a></br></br>
+      <a href="#"><img src="imagenes/a2.png" alt="Servicio mécanico" width="193" height="42"></a></br></br>
+      <a href="#"><img src="imagenes/a3.png" alt="Engomado ecológico" width="212" height="42"></a></br></br>
+      <a href="#"><img src="imagenes/a4.png" alt="Refaccionaria" width="150" height="42"></a></br></br>
+      <a href="#"><img src="imagenes/a5.png" alt="Compra/venta de autos" width="242" height="42"></a></br></br>
+      <a href="#"><img src="imagenes/a6.png" alt="Accesorios para auto" width="220" height="42"></a></br></br>
+      <a href="#"><img src="imagenes/a7.png" alt="Aromatizantes" width="157" height="42"></a></br></br>
+      <a href="#"><img src="imagenes/a8.png" alt="Llaveros personalizados" width="252" height="42"></a></br></br>
+      <a href="#"><img src="imagenes/a9.png" alt="Productos de limpieza" width="231" height="42"></a></br></br>
+      <a href="#"><img src="imagenes/a10.png" alt="Señalamientos" width="160" height="42"></a></br></br>
+      <a href="#"><img src="imagenes/a11.png" alt="Baterías" width="96" height="42"></a></br></br>
+  </div>
+  <div class="item3">
+    <div class="cabecera">
+    <div class="slideshow-container">
+      
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="imagenes/articulo1.png" alt="Cursos" width="1000" height="428">
+        <div class="text">Visita nuestros cursos de mécanica básica para accidentes</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="imagenes/articulo2.png" alt="cátalogo de refacciones" width="1000" height="428">
+        <div class="text">Visita nuestro cátalogo de refacciones</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="imagenes/articulo3.png" alt="Mapa de accidentes" width="1000" height="428">
+        <div class="text">Visita nuestro mapa en tiempo real de accidentes de tráfico</div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+      </div>
+  </div>  
+  <div class="item4">
+    <a href="#"><img src="imagenes/articulo2.png" alt="cátalogo de refacciones" width="1030" height="458"> </a>
+
+  </div>
+  
+  <div class="item5">
+    <a href="#"><img src="imagenes/articulo3.png" alt="mapa de accidentes" width="1030" height="458"> </a>
+
+  </div>
+  <div class="item6">
+    <img src="imagenes/piepagina.png" alt="Pie de pagina" width="270" height="42">
+  </div>  
+</div>
+
+</body> 
+</html>
+
