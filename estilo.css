@@ -1,215 +1,112 @@
-body{
-    background-color: black;
-}
-#cabecera{
-    background-color: black;
-    text-align: center;
-    width: 95%;
-}
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
 
-.grid-container {
-display: grid;
-grid-template-columns: auto auto auto;
-grid-gap: 10px;
-background-image: url('imagenes/fondo.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.grid-container > div {
-background-color: darkred;
-text-align: center;
-padding: 20px 0;
-font-size: 30px;
+html {
+  height: 100%;
+}
+
+/* body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+} */
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header; 
+  background-color: #bcc2c9;
+}
+
+.menuBar {
+  position: fixed;
+   top: 5% ; 
+   width: 100%; 
+  background-color: #f5f5f5;
+  display: inline;
+}
+#horizontal li{
+  display: inline;
+  margin-left:100px;
+  
+}
+.footer {
+  position: fixed;
+   top: 90% ; 
+   width: 100%; 
+  background-color: #f5f5f5;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #fdcfcf;
+}
+
+.mainLeft {
+  background-color: #c98888;
+  width: 49%;
+  float: left;
+  height: 700px;
+}
+.mainRight {
+  background-color: #f5ffbf;
+  width: 50%;
+  height: 700px;
+  float:right;
 }
 
 
+/* .footer {
+  grid-area: footer; 
+  background-color: #8c96a0;
+} */
 
-.item1 {
-grid-column-start: 2;
-grid-column-end: 99;
-grid-row-start: 1;
-grid-row-end: 20;
-background-image: url('imagenes/fondo_header.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-color: white;
-align-items: center;
-border-radius: 10px;
-}
-.item6 {
-grid-column-start: 1;
-grid-column-end: 100;
-background-color: darkred;
-color: white;
-align-items: center;
-border-radius: 10px;
-}
-.item2 {
-grid-column-start: 2;
-grid-column-end: 15;
-grid-row-start: 20;
-grid-row-end: 80;
-background-color: darkred;
-color: white;
-align-items: left;
-border-radius: 10px;
+ /* .grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header"  100px
+    "navbar"  50px
+    "main"    auto
+    "sidebar" 100px
+    "footer"  100px;
+}  */
 
+/* @media (min-width: 600px) {
+  .grid-container {
+    /* grid-template-columns: 200px auto;
+    grid-template-rows: 100px 50px auto 100px;
+    grid-template-areas: 
+    "header  header"
+    "navbar  navbar"
+    "sidebar main"
+    "footer  footer"; */
 
-}
-.item3 {
-grid-column-start: 15;
-grid-column-end: 99;
-grid-row-start: 20;
-grid-row-end: 40;
-background-color: darkred;
-color: white;
-border-radius: 10px;
-}
-.item4 {
-grid-column-start: 15;
-grid-column-end: 99;
-grid-row-start: 40;
-grid-row-end: 60;
-background-color: darkred;
-color: white;
-align-items: center;
-border-radius: 10px;
-}
-.item5 {
-grid-column-start: 15;
-grid-column-end: 99;
-grid-row-start: 60;
-grid-row-end: 80;
-background-color: darkred;
-color: orangered;
-align-items: center;
-border-radius: 10px;
-}
-.item7 {
-    grid-column-start: 1;
-    grid-column-end: 101;
-    grid-row-start: 1;
-    grid-row-end: 1;
-    background-color: transparent;
-    color: orangered;
-    align-items: center;
-    border-radius: 10px;
-    }
-a{
-color: red; 
-text-decoration: none;
-}
+   /*  grid-template:
+      "header  header" 100px
+      "navbar  navbar" 50px
+      "sidebar main"   auto
+      "footer  footer" 100px /
+      200px    auto;
+  }
+} */
 
-/* slider*/
-
-* {box-sizing: border-box}
-    body {font-family: Verdana, sans-serif; margin:0}
-    .mySlides {display: none}
-    img {vertical-align: middle;}
-    
-    /* Slideshow container */
-    .slideshow-container {
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
-    }
-
-    img :hover{
-      transform: scale(1.02,1.02);
-      z-index: 9;
-    }
-    
-    /* Next & previous buttons */
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      color: black;
-      background-color: rgba(255,255,255,0.3);
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-    
-    /* Position the "next button" to the right */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    
-    /* On hover, add a black background color with a little bit see-through */
-    .prev:hover, .next:hover {
-      color: white;
-      background-color: rgba(0,0,0,0.8);
-    }
-    
-    /* Caption text */
-    .text {
-      color: #f2f2f2;
-      background-color: rgba(0,0,0,0.6);
-      font-size: 15px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-    }
-    
-    /* Number text (1/3 etc) */
-    .numbertext {
-      color: #f2f2f2;
-      background-color: rgba(0,0,0,0.4);
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-    
-    /* dots/bullets/indicators */
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-    
-    .active, .dot:hover {
-      background-color: #717171;
-    }
-    
-    /* Fading animation */
-    .fade {
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 1.5s;
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-    
-    @-webkit-keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-    
-    @keyframes fade {
-      from {opacity: .4} 
-      to {opacity: 1}
-    }
-    
-    
-    @media only screen and (max-width: 300px) {
-      .prev, .next,.text {font-size: 11px}
-    }
-
-    /*fin*/
+/* @media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "header  header header"  100px
+      "navbar  main   sidebar" auto
+      "footer  footer footer"  100px /
+      200px    auto   200px;
+  }
+} */
